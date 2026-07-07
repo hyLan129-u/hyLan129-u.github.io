@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日窝!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* 星空黑背景+星光点 */
+            background: #050512;
+            background-image: radial-gradient(#ffffff12 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .main-box {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            aspect-ratio: 7 / 5;
+            border: 4px solid #fff;
+        }
+        .text-area {
+            width: 80%;
+            margin: 60px auto 0;
+            font-size: clamp(22px, 5vw, 42px);
+            color: #fff;
+            text-align: center;
+        }
+        /* 左下角图片框 */
+        .img-wrap {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 20%;
+            min-width: 80px;
+            aspect-ratio: 1 / 1;
+            border: 4px solid #fff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* yes/no圆形按钮 */
+        .btn-group {
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+            display: flex;
+            gap: 15px;
+        }
+        .circle-btn {
+            width: clamp(50px, 12vw, 100px);
+            aspect-ratio: 1 / 1;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #fff;
+            font-size: clamp(16px, 4vw, 32px);
+            font-weight: bold;
+        }
+        .circle-btn:hover {
+            background-color: #ffffff22;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <div class="text-area">听说你今天生日窝~</div>
+
+        <!-- 替换src里的地址就能放图片 -->
+        <div class="img-wrap">
+            <img src="/haha.png" alt="配图">
+        </div>
+
+        <div class="btn-group">
+            <a href="yes.html" class="circle-btn">yes</a>
+            <a href="no.html" class="circle-btn">no</a>
+        </div>
+    </div>
+</body>
+</html>
